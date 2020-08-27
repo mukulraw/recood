@@ -17,5 +17,19 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow"
             android:visible="false"/>
+        <item
+            android:title="My Adresses" />
+        <item
+            android:title="My Orders" />
+        <item
+            android:title="Contact Us" />
+        <item
+            android:title="About Us" />
+        <item
+            android:title="Share" />
+        <item
+            android:title="Terms and Conditions" />
+        <item
+            android:title="Log Out" />
     </group>
 </menu>
