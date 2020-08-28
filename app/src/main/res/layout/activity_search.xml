@@ -7,19 +7,27 @@
     tools:context=".Activities.SearchActivity"
     android:orientation="vertical">
     <EditText
+        android:id="@+id/search_box_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/input_box"
-        android:padding="15dp"
-        android:layout_margin="10dp"
-        android:hint="Search Restaurants"
-        android:drawableEnd="@drawable/ic_search_light"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/blue_stroke_round"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Find Restaurants"
+        android:textColor="#5F7D95"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_place" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search Results"
         android:textStyle="bold"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

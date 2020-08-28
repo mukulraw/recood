@@ -4,92 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f5f5"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
+                android:id="@+id/search_box_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Search Restaurants"
-                android:background="@drawable/input_box"
-                android:padding="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="55dp"
-                android:drawableEnd="@drawable/ic_search_light"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/blue_stroke_round"
+                android:drawablePadding="10dp"
                 android:gravity="center_vertical"
-                android:id="@+id/search_box_main"/>
+                android:padding="10dp"
+                android:text="Find Restaurants"
+                android:textColor="#5F7D95"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_place" />
+
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/banner_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                tools:listitem="@layout/banner_layout"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:id="@+id/banner_recycler" />
+                tools:listitem="@layout/banner_layout" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:minHeight="0dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:background="@drawable/black_box"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="5dp"
                     android:text="Delivery"
-                    android:textColor="@color/color_white"/>
+                    android:textColor="@color/color_white" />
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/input_box"
                     android:layout_weight="1"
-                    android:layout_marginStart="5dp"
-                    android:text="Pick Up"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:text="Pick Up" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
                 android:text="Choose your cuisine"
-                android:layout_margin="15dp"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cuisine_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/cuisine_thumbnail"
                 android:orientation="horizontal"
-                android:id="@+id/cuisine_recycler"
-                android:layout_marginBottom="15dp"/>
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/cuisine_thumbnail" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
                 android:text="Hot Deals, cooking nearby"
-                android:layout_margin="15dp"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/thumbnail_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="2"
-                tools:listitem="@layout/item_layout"
-                android:id="@+id/thumbnail_recycler"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="100dp"
-                android:nestedScrollingEnabled="false"/>
+                tools:listitem="@layout/item_layout" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

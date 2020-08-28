@@ -3,9 +3,8 @@
     android:orientation="vertical" android:layout_width="130dp"
     android:layout_height="100dp"
     android:background="@drawable/input_box"
-    android:elevation="10dp"
-    android:layout_marginStart="15dp"
-    android:layout_marginBottom="15dp"
+    android:elevation="4dp"
+    android:layout_margin="8dp"
     android:padding="10dp">
     <ImageView
         android:layout_width="50dp"
